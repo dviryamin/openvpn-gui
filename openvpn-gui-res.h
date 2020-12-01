@@ -154,6 +154,7 @@
 #define IDS_MENU_IMPORT                 1023
 #define IDS_MENU_CLEARPASS              1024
 #define IDS_MENU_RECONNECT              1025
+#define IDS_MENU_SELECT_CERTIFICATE     1026
 
 /* LogViewer Dialog */
 #define IDS_ERR_START_LOG_VIEWER        1101

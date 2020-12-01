@@ -87,6 +87,7 @@ typedef struct {
 #define FLAG_SAVE_KEY_PASS  (1<<4)
 #define FLAG_SAVE_AUTH_PASS (1<<5)
 #define FLAG_DISABLE_SAVE_PASS (1<<6)
+#define FLAG_ENABLE_CRYPTOAPICERT (1<<6)
 
 #define CONFIG_VIEW_AUTO      (0)
 #define CONFIG_VIEW_FLAT      (1)

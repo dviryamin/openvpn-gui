@@ -66,6 +66,9 @@
     <ClCompile Include="viewlog.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cryptoapicert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="access.h">
@@ -126,6 +129,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="config-msvc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptoapicert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

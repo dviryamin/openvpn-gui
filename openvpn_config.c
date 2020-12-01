@@ -34,6 +34,7 @@
 #include "save_pass.h"
 #include "misc.h"
 #include "passphrase.h"
+#include "cryptoapicert.h"
 
 typedef enum
 {
@@ -121,6 +122,11 @@ AddConfigFileToList(int config, const TCHAR *filename, const TCHAR *config_dir)
             break;
         }
     }
+
+    /* Check if cryptoapicert configuration is set */
+    if (CheckCryptoAPICertEnabled(c))
+        c->flags |= FLAG_ENABLE_CRYPTOAPICERT;
+
     /* check whether passwords are saved */
     if (o.disable_save_passwords)
     {

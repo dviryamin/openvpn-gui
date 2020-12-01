@@ -93,7 +93,8 @@ CreatePopupMenus()
         }
 
         AppendMenu(hMenu, MF_STRING, IDM_VIEWLOGMENU, LoadLocalizedString(IDS_MENU_VIEWLOG));
-
+        if (o.conn[0].flags & FLAG_ENABLE_CRYPTOAPICERT)
+            AppendMenu(hMenu, MF_STRING, IDM_SELECTCERTMENU, LoadLocalizedString(IDS_MENU_SELECT_CERTIFICATE));
         AppendMenu(hMenu, MF_STRING, IDM_EDITMENU, LoadLocalizedString(IDS_MENU_EDITCONFIG));
         AppendMenu(hMenu, MF_STRING, IDM_CLEARPASSMENU, LoadLocalizedString(IDS_MENU_CLEARPASS));
 
@@ -176,7 +177,8 @@ CreatePopupMenus()
             }
 
             AppendMenu(hMenuConn[i], MF_STRING, IDM_VIEWLOGMENU + i, LoadLocalizedString(IDS_MENU_VIEWLOG));
-
+            if (o.conn[i].flags & FLAG_ENABLE_CRYPTOAPICERT)
+                AppendMenu(hMenuConn[i], MF_STRING, IDM_SELECTCERTMENU + i, LoadLocalizedString(IDS_MENU_SELECT_CERTIFICATE));
             AppendMenu(hMenuConn[i], MF_STRING, IDM_EDITMENU + i, LoadLocalizedString(IDS_MENU_EDITCONFIG));
             AppendMenu(hMenuConn[i], MF_STRING, IDM_CLEARPASSMENU + i, LoadLocalizedString(IDS_MENU_CLEARPASS));
 
